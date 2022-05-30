@@ -43,7 +43,7 @@ def suggest_by_spec(title):
     lap_indices = [i[0] for i in similarity_score]
     all_data=details.reset_index()
     #print(type(all_data.iloc[lap_indices,0].values.tolist()))
-    return(all_data.iloc[lap_indices,0].values.tolist())
+    return(all_data.iloc[lap_indices,[0,1]].values.tolist())
     
 if __name__ =="util":
     loaddata()  
